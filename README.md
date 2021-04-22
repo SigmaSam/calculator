@@ -2,6 +2,10 @@
 
 > A functional calculator build with React.
 
+## Liver Version
+
+[Calculator](https://react-calculator-sigmasam.herokuapp.com/)
+
 ## Built With
 
 This project was built using these technologies:
