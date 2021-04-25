@@ -1,20 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = (props) => {
-  const { result } = props;
-
-  return (
-    <div>
-      <h1>
-        { result }
-      </h1>
-    </div>
-  );
-};
+const Display = ({ result }) => <div>{result}</div>;
 
 Display.propTypes = {
-  result: PropTypes.number,
+  result: PropTypes.string,
 };
 
 Display.defaultProps = {

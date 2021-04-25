@@ -6,8 +6,6 @@ const calculate = (data, name) => {
   if (name === '+/-') {
     return {
       next: `${next * (-1)}`,
-      operation,
-      total,
     };
   }
 
@@ -55,15 +53,12 @@ const calculate = (data, name) => {
     return {
       next: `${operate(next, total, operation)}`,
       operation: '=',
-      total,
     };
   }
 
   if (next === null) {
     return {
       next: parseFloat(`${name}`, 10),
-      operation,
-      total,
     };
   }
 
@@ -71,7 +66,7 @@ const calculate = (data, name) => {
     return { total: null, next: null, operation: null };
   }
 
-  return { next: parseFloat(`${next}${name}`, 10), operation, total };
+  return { next: parseFloat(`${next}${name}`, 10), operation };
 };
 
 export default calculate;
