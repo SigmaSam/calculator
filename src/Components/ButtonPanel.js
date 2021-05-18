@@ -10,7 +10,7 @@ const ButtonPanel = ({ clickHandler }) => {
   const group4 = ['1', '2', '3', '+'];
   const group5 = ['0', '.', '='];
   return (
-    <div>
+    <div className="groupContainer">
       <div>
         {group1.map((name, i) => (
           <Button
