@@ -6,15 +6,15 @@ import ButtonPanel from '../ButtonPanel';
 import Display from '../Display';
 
 describe('Display Display.js', () => {
-    it('renders correctly', () => {
-      const tree = TestRenderer.create(<BrowserRouter><Display /></BrowserRouter>).toJSON();
-      expect(tree).toMatchSnapshot();
-    });
+  it('renders correctly', () => {
+    const tree = TestRenderer.create(<BrowserRouter><Display /></BrowserRouter>).toJSON();
+    expect(tree).toMatchSnapshot();
   });
+});
 
-  describe('Display ButtonPanel.js', () => {
-    it('renders correctly', () => {
-      const tree = TestRenderer.create(<BrowserRouter><ButtonPanel /></BrowserRouter>).toJSON();
-      expect(tree).toMatchSnapshot();
-    });
+describe('Display ButtonPanel.js', () => {
+  it('renders correctly', () => {
+    const tree = TestRenderer.create(<BrowserRouter><ButtonPanel /></BrowserRouter>).toJSON();
+    expect(tree).toMatchSnapshot();
   });
+});
