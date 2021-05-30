@@ -46,6 +46,7 @@ code {
   justify-content: space-around;
   width: 40%;
 }
+
 .link {
   padding: 0.2rem 0.5rem;
   border: 1px solid gray;
@@ -54,4 +55,3 @@ code {
   color: black;
   background-color: rgb(243, 166, 51);
 }
-
