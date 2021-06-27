@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import '@testing-library/jest-dom';
-import TestRenderer from 'react-test-renderer'; 
+import TestRenderer from 'react-test-renderer';
 import Quote from '../Quote';
 
 describe('Display Quote page', () => {
