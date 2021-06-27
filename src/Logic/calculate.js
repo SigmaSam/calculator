@@ -1,31 +1,13 @@
 import operate from './operate';
 
-const calculate = (data, name) => {
-  const { total, next, operation } = data;
+const calculate = (dataObject, symbol) => {
+  const { total, next, operation } = dataObject;
 
-  if (name === '+/-') {
-    return {
-      next: `${next * (-1)}`,
-    };
+  if (symbol === 'AC') {
+    return { total: null, next: null, operation: null };
   }
 
-  if (name === '%') {
-    return {
-      total: `${operate(next, total, operation)}`,
-      next: null,
-      operation: '%',
-    };
-  }
-
-  if (name === '/') {
-    return {
-      total: `${operate(next, total, operation)}`,
-      operation: '/',
-      next: '',
-    };
-  }
-
-  if (name === 'X') {
+  if (symbol === 'X') {
     return {
       total: `${operate(next, total, operation)}`,
       next: '0',
@@ -33,7 +15,23 @@ const calculate = (data, name) => {
     };
   }
 
-  if (name === '+') {
+  if (symbol === '/') {
+    return {
+      total: `${operate(next, total, operation)}`,
+      operation: '/',
+      next: '',
+    };
+  }
+
+  if (symbol === '%') {
+    return {
+      total: `${operate(next, total, operation)}`,
+      next: null,
+      operation: '%',
+    };
+  }
+
+  if (symbol === '+') {
     return {
       total: `${operate(next, total, operation)}`,
       next: '0',
@@ -41,32 +39,38 @@ const calculate = (data, name) => {
     };
   }
 
-  if (name === '-') {
+  if (symbol === '-') {
     return {
       total: `${operate(next, total, operation)}`,
       next: '0',
       operation: '-',
     };
   }
-
-  if (name === '=') {
+  if (symbol === '=') {
     return {
       next: `${operate(next, total, operation)}`,
       operation: '=',
+      total,
+    };
+  }
+
+  if (symbol === '+/-') {
+    return {
+      next: `${next * (-1)}`,
+      operation,
+      total,
     };
   }
 
   if (next === null) {
     return {
-      next: parseFloat(`${name}`, 10),
+      next: parseFloat(`${symbol}`, 10),
+      operation,
+      total,
     };
   }
 
-  if (next === 'AC') {
-    return { total: null, next: null, operation: null };
-  }
-
-  return { next: parseFloat(`${next}${name}`, 10), operation };
+  return { next: parseFloat(`${next}${symbol}`, 10), operation, total };
 };
 
 export default calculate;

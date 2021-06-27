@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Quote page renders correctly 1`] = `
+<div>
+  <div>
+    <h1>
+      Quote
+    </h1>
+    <p>
+      Seriusly dude just use the OS calculator, most of them are pretty powerfull now. - Samuel Almao.
+    </p>
+  </div>
+</div>
+`;

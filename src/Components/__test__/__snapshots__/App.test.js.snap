@@ -1,17 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Display App.js renders correctly 1`] = `
-<div
-  className="Display"
->
-  <h1
-    className="Result"
-  >
-    0
-  </h1>
-</div>
-`;
-
 exports[`Display ButtonPanel.js renders correctly 1`] = `
 <div
   className="groupContainer"
