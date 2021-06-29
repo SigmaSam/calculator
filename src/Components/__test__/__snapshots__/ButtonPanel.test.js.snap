@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Home.js renders correctly 1`] = `
+<button
+  className="button"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "orange",
+      "width": "25%",
+    }
+  }
+  type="button"
+>
+  
+</button>
+`;

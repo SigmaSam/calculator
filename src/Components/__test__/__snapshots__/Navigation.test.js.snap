@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Navbar renders correctly 1`] = `
+<div
+  className="NavBar"
+>
+  <h1
+    className="Logo"
+  >
+    Math Magicians
+  </h1>
+  <p>
+    Here you can do Basic Math.
+  </p>
+  <p>
+    For those times where you forget that almost all OS come with an integrated Calculator.
+  </p>
+  <div
+    className="links"
+  >
+    <a
+      className="link"
+      href="/home"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      className="link"
+      href="/quote"
+      onClick={[Function]}
+    >
+      Quote of The Day
+    </a>
+    <a
+      className="link"
+      href="/app"
+      onClick={[Function]}
+    >
+      Calculator
+    </a>
+  </div>
+</div>
+`;
