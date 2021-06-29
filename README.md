@@ -54,7 +54,7 @@ This will open the calculator at local webserver at http://localhost:3000/
 
 To run the default tests:
 
-`jest`
+`npm test`
 
 ## 👤 Author
 
